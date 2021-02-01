@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator model</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: rgb(134, 203, 243);
+    }
+    .calci{
+        width: 500px;
+        padding-top: 100px;
+        padding-left: 100px;
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        text-align: center;
+    }
+    .btncalculator{
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        margin: 5px;
+        background: red;
+        outline: none;
+    }
+    #display{
+        width: 80%;
+        height: 60px;
+        font-size: 50px;
+        padding: 5px;
+        
+        outline: none;
+        border-radius: 30px;
+        border: 2px solid red;
+    }
+    .oparator{
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        margin: 5px;
+        background: red;
+        outline: none;
+    }
+    .zero{
+        width: 126px;
+        height: 55px;
+        border: none;
+        border-radius: 30px;
+        margin: 5px;
+        background: red;
+        outline: none;
+    }
+    .zero:hover{
+        background: rgb(114, 195, 228);
+    }
+    .oparator:hover{
+        background: rgb(114, 195, 228);
+    }
+    .btncalculator:hover{
+        background: rgb(114, 195, 228);
+    }
+    article{
+        position: absolute;
+        left:35%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+        font-family: sans-serif;
+        font-size: 40px;
+    }
+    .E{
+        color: red;
+        font-size: 40px;
+        font-style: italic;
+        text-transform: lowercase;
+    }
+    h1, h3{
+        color: wheat;
+        text-transform: uppercase;
+    }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Online Calculator</h1>
+        <h3>Make by Nai<span class="E">e</span>m Islam</h3>
+    </article>
+    <section class="head">
+        <form action="NewCalculator.html" name="naiem" method="POST" class="calci">
+            <input type="text" name="nahid" id="display">
+            <br><br>
+            <input type="button" class="btncalculator" value="C" onclick="naiem.nahid.value=''">
+            <input type="button" class="btncalculator" value="00" onclick="naiem.nahid.value+='00'">
+            <input type="button" class="btncalculator" value="<" onclick="naiem.nahid.value=naiem.nahid.value.substring(0,naiem.nahid.value.length*1-1)">
+            <input type="button" class="oparator" value="/" onclick="naiem.nahid.value+='/'">
+            <br>
+            <br>
+            <input type="button" class="btncalculator" value="7" onclick="naiem.nahid.value+='7'">
+            <input type="button" class="btncalculator" value="8" onclick="naiem.nahid.value+='8'">
+            <input type="button" class="btncalculator" value="9" onclick="naiem.nahid.value+='9'">
+            <input type="button" class="oparator" value="*" onclick="naiem.nahid.value+='*'">
+            <br><br>
+            <input type="button" class="btncalculator" value="4" onclick="naiem.nahid.value+='4'">
+            <input type="button" class="btncalculator" value="5" onclick="naiem.nahid.value+='5'">
+            <input type="button" class="btncalculator" value="6" onclick="naiem.nahid.value+='6'">
+            <input type="button" class="oparator" value="-" onclick="naiem.nahid.value+='-'">
+            <br><br>
+            <input type="button" class="btncalculator" value="1" onclick="naiem.nahid.value+='1'">
+            <input type="button" class="btncalculator" value="2" onclick="naiem.nahid.value+='2'">
+            <input type="button" class="btncalculator" value="3" onclick="naiem.nahid.value+='3'">
+            <input type="button" class="oparator" value="+" onclick="naiem.nahid.value+='+'">
+            <br><br>
+            <input type="button" class="zero" value="0" onclick="naiem.nahid.value+='0'">
+            <input type="button" class="btncalculator" value="." onclick="naiem.nahid.value+='.'">
+            <input type="button" class="oparator" value="=" onclick="naiem.nahid.value=eval(naiem.nahid.value)">
+
+
+        </form>
+    </section>
+</body>
+</html>
